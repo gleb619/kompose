@@ -1,0 +1,133 @@
+.idea/*
+
+build/*
+cbs-executor-domain/build/*
+cbs-executor-api/build/*
+cbs-executor-app/build/*
+cbs-executor-restclient/build/*
+cbs-loan-domain/build/*
+cbs-loan-api/build/*
+cbs-loan-restclient/build/*
+cbs-executor-app/src/main/resources/version.properties
+
+.gradle/*
+*.iml
+
+##### YE OLDE .gitignore #####
+
+# Created by https://www.gitignore.io
+
+### PlayFramework ###
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.iml
+*.eml
+/dist/
+.cache
+
+
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+
+*.iml
+
+## Directory-based project format:
+.idea/
+# if you remove the above rule, at least ignore the following:
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+## File-based project format:
+.ipr
+.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+# Atomikos stuff
+tmlog*
+
+# Local properties
+profiles/local.properties
+
+# Eclipse
+.project
+.classpath
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+
+# Netbeans
+**/nb-configuration.xml
+**/nbactions.xml
+
+# Jetty
+**/jetty-web.xml
+
+*btm*log
+*.war
+**/target/*
+*~
+war/*
+*~
+/cbs/core/target/
+/cbs/accounts/target/
+/cbs/core-tools/target/
+/cbs/customers/target/
+/cbs/transactions/target/
+/cbs/hr/target/
+/cbs/rates/target/
+/products/products-impl/target/
+/pawns/pawns-impl/target/
+/pawns/pawns-api/target/
+*.java1

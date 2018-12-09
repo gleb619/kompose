@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+#  redis:
+#    image: redis:alpine
+#    container_name: redis
+#    ports: ["6378:6379"]
+#    networks:
+#      - back-tier
+#    labels:
+#      kompose.service.type: nodeport
+#      kompose.service.expose: "counter.example.com"
+
+#  db:
+#    image: postgres:9.4
+#    container_name: db
+#    volumes:
+#      - "./data:/var/lib/postgresql/data"
+#    restart: "on-failure"
+#    networks:
+#      - back-tier
+
+  redis-master:
+    image: k8s.gcr.io/redis:e2e
+    ports:
+      - "6379"
+
+  redis-slave:
+    image: gcr.io/google_samples/gb-redisslave:v1
+    ports:
+      - "6379"
+    environment:
+      - GET_HOSTS_FROM=dns
+
+#  frontend:
+#    image: gcr.io/google-samples/gb-frontend:v4
+#    ports:
+#      - "80:80"
+#    environment:
+#      - GET_HOSTS_FROM=dns
+#    labels:
+#      kompose.service.type: LoadBalancer
+#
+#volumes:
+#  db-data:
+#
+#networks:
+#  front-tier:
+#  back-tier:
