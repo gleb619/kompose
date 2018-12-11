@@ -35,6 +35,9 @@ RUN echo http://mirror.yandex.ru/mirrors/alpine/v3.5/main > /etc/apk/repositorie
     chmod +x kompose && \
     mv ./kompose /usr/local/bin/kompose
 
+RUN apk add libc6-compat && \
+    mkdir /lib64 && ln -s /lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
+
 USER groovy
 
 #EXPOSE 8080
