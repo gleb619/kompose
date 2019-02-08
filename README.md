@@ -8,10 +8,11 @@ Example of project for cd to kubernetes cluster(actually rancher, but it's not s
 Create individual project in your gitlab. Create branches in new project with the name of namesapces in kubernetes. For example, if you have namespaces dev, test, stage and etc. you must create branches dev, test, stage and etc.
 
 Structure of project:
+```
 .
 ├── docker-compose.yml
 └── .gitlab-ci.yml
-
+```  
 
 .gitlab-ci.yml contents:
 ```
@@ -31,7 +32,7 @@ deploy:
     - /^dev$/
   script:
     - groovy /app/main.groovy -c
-```
+```  
 
 docker-compose.yml contents:
 ```
@@ -56,9 +57,11 @@ services:
    labels:
      kompose.service.type: clusterip
      kompose.service.expose: "*.test.164.org"
-     kompose.backendPath: '/path for ingress(api gateway stuff)'
+     kompose.backendPath: '/path_for_ingress(api gateway stuff)'
      kompose.image-pull-secret: '<name of your secret>'
      kubernetes.io/ingress.class: traefik-esbs
      traefik.ingress.kubernetes.io/rewrite-target: /
-
 ```
+output:  
+
+<img src="https://raw.github.com/gleb619/kompose/master/build_process.png">
